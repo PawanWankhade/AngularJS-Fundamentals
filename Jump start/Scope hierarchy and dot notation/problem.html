@@ -1,0 +1,35 @@
+<html ng-app = "myApp">
+    <head>
+        <title>Angular Expresstions</title>
+        <script type="text/javascript" src="angular.js"></script>
+        <script type="text/javascript" src="appProblem.js"></script>
+    </head>
+  <body>
+      <p>Problem is if you change the parent text box this will reflect in parent and child both.
+      But if you change child box this will brake binding behaviour.This is because when we make change to child box this looks for scope variable in child controller which is not present. Thus it will create new variable and shadow the parent copy of the same variable.</p>
+       <div ng-controller="ParentController">
+           <p>Parent Box<input type="text" ng-model="name"></p>
+           <p>{{name}}</p>
+           <div ng-controller="ChildController">
+           <p>Child box<input type="text" ng-model="name"></p>
+               <p>{{name}}</p>
+           
+           </div>
+      
+      </div> 
+    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

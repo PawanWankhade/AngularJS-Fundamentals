@@ -1,0 +1,32 @@
+<html ng-app = "myApp">
+    <head>
+        <script type="text/javascript" src="angular.js" ></script>
+        <script type="text/javascript" src="appSolution.js"></script>
+    </head>
+    <body>
+        <p>Use Dot notation to avoid confustion. Use objects to store values rather than pritives</p>
+        <div ng-controller="ParentController">
+         <p>Parent Box<input type="text" ng-model="model.name"></p>
+           <p>{{model.name}}</p>
+            <div ng-controller= "ChildController">
+ <p>Child Box<input type="text" ng-model="model.name"></p>  
+                <p>{{model.name}}</p>        
+            
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

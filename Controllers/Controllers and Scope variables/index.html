@@ -1,0 +1,49 @@
+<html ng-app = "myApp">
+    <head>
+        <title>Angular Expresstions</title>
+        <script type="text/javascript" src="angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+  <body>
+      <p>Parent affects the child cotroller only, child affects the parent controller. But second parent controller can not affect on first parent and child controller. It created its own instance of the parent controller. Second parent controller is independent.It still receives information from the original controller instantiation.However Second controller is separate controller managed by separate controller.Therefore when we change the data it changed the model within that controller scope only not across all controller.Every controller can be used multiple times. In case of TempCotroller, it instantiate with its own values and it is completely independent controller.
+      </p>
+       <div ng-controller="ParentController">
+           <p>Parent Box<input type="text" ng-model="model.name"></p>
+           <p>{{name}}</p>
+           <div ng-controller="ChildController">
+           <p>Child box<input type="text" ng-model="model.name"></p>
+               <p>{{name}}</p>
+       </div>
+           
+        <div ng-controller="ParentController">
+           <p>Second Parent Box<input type="text" ng-model="model.name"></p>
+           <p>{{name}}</p>
+           
+        </div>
+      
+      </div> 
+      
+       
+        <div ng-controller="TempController">
+           <p>TempController Box<input type="text" ng-model="model.name"></p>
+           <p>{{name}}</p>
+           
+        </div>
+      
+      </div> 
+    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<html ng-app = "myApp">
+    <head>
+        <title>Angular Expresstions</title>
+        <script type="text/javascript" src="angular.js"></script>
+        <script type="text/javascript" src="app_ControllerAsSyntax.js"></script>
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     </head>
+  <body class="container">
+      <h3>Controller as syntax
+      </h3>
+      
+      <div ng-controller="ParentController as parent" class="container panel panel-primary">
+        <p>{{message}}</p>    
+       <div ng-controller="FirstChild as first" class="panel panel-danger">
+           <p>{{parent.message}}</p>
+           <p>{{first.message}}</p>
+      </div> 
+      
+       <div ng-controller="SecondChild as second" class="panel panel-primary">
+        <p>{{parent.message}}</p>
+           <p>{{second.message}}</p>
+      </div> 
+    </div>
+    </body>
+</html>
+
+
+
+
+
+
+

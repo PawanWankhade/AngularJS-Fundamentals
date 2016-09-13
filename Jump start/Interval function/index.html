@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Angular Interval Demo</title>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+	
+</head>
+<body ng-controller="MainController">
+    <p>Choose Index <input type="text" ng-model="itemIndex"><button ng-click="getItem()">Search Item</button></p>
+    <p>Selected Item : {{currentItem}}</p>
+</body>
+</html>

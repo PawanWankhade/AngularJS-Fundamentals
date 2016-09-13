@@ -1,0 +1,44 @@
+<html ng-app = "myApp">
+    <head>
+        <title>Angular Expresstions</title>
+        <script type="text/javascript" src="angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+  <body ng-controller="MainController">
+    <h4>Angular Expressions</h4>
+    <p>Standard bracket Expression </p>  
+    <p>{{randomNumber}}</p>
+      
+    <p>One time bracket expression</p>  
+    <p>{{::randomNumber}}</p>
+    
+    <p>Array bracket expression</p>  
+    <p>{{fruits[2]}}</p>
+    
+    <p>Arithmatic expression</p>  
+    <p>{{number1*number2}}</p>
+      
+    <p>Evaluation Expresstion</p>
+    <p>{{randomNumber}} > 500000</p>  
+    <p>{{randomNumber>500000}}</p>  
+      
+      
+    <p>Binding to HTML attribute</p>  
+    <p>Enter width <input type="text" ng-model="pWidth"></p>  
+      <p style="background:#ff0000;width:{{pWidth}}px">This is dynamic paragraph</p>
+      
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

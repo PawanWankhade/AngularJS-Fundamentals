@@ -1,0 +1,32 @@
+<html ng-app = "myApp">
+    <head>
+        <title>Angular Expresstions</title>
+        <script type="text/javascript" src="angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     </head>
+  <body class="container">
+      <h3>Same controller in single page works independently.
+          Every controller creates its own instance of the scope variable.
+      </h3>
+      
+      <div ng-controller="ParentController">
+          <input type="text" ng-model="parentMessage">
+          <p>{{parentMessage}}</p>
+      </div> 
+    
+      
+      <div ng-controller="ParentController">
+        <input type="text" ng-model="parentMessage">
+          <p>{{parentMessage}}</p>
+      </div> 
+    
+    </body>
+</html>
+
+
+
+
+
+
+

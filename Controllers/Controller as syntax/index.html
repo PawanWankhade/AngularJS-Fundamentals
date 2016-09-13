@@ -1,0 +1,32 @@
+<html ng-app = "myApp">
+    <head>
+        <title>Angular Expresstions</title>
+        <script type="text/javascript" src="angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     </head>
+  <body class="container">
+      <h3>Sample example to show parent and child hierarchy.
+      </h3>
+      
+      <div ng-controller="ParentController" class="container panel panel-primary">
+        <p>{{parentMessage}}</p>    
+       <div ng-controller="FirstChild" class="panel panel-danger">
+           <p>{{parentMessage}}</p>
+           <p>{{firstMessage}}</p>
+      </div> 
+      
+       <div ng-controller="SecondChild" class="panel panel-primary">
+        <p>{{parentMessage}}</p>
+           <p>{{secondMessage}}</p>
+      </div> 
+    </div>
+    </body>
+</html>
+
+
+
+
+
+
+
