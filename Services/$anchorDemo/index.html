@@ -1,0 +1,14 @@
+<html  ng-app = "myApp">
+<head>
+ <title>My Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="MainController">
+	<p>$location and $anchorSchroll demo</p>
+	<a href="" id="topLink" ng-click="jumpToBottom()">Click to go bottom</a>
+	<div id="sampleDiv" style="height:1000px;border:1px solid"></div>
+	<a href="" id="bottomLink" ng-click="jumpToTop()">Click to go top</a>
+	{{message}}
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html  ng-app = "myApp">
+<head>
+ <title>My Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.8/angular-locale_ca-fr.js">
+	</script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.8/angular-locale_en.js"> -->
+	<!-- </script> -->
+	
+	<script src="app.js"></script>
+</head>
+<body ng-controller="MainController">
+	<p>$locale demo</p>
+	<p>The current date in the current language is {{currentDate | date:formattedDate}}</p>
+	<br />
+	<p>Cost per year is {{cost | currency}}</p> 
+	
+	
+	<p> This date format and cost is as per locale setting file that we have added in script tag.
+	This setting is as per france locale settings.
+	</p>
+	
+</body>
+</html>

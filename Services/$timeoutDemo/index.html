@@ -1,0 +1,16 @@
+<html  ng-app = "myApp">
+<head>
+ <title>My Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	
+	<script src="app.js"></script>
+</head>
+<body ng-controller="MainController">
+	<p>$timeout demo</p>
+
+	<button ng-click="startTimeout()">Start new timeout</button>
+	<button ng-click="cancelTimeout()">Cancel timeout</button>
+	<input type = "text" placeholder="Enter timeout interval" ng-model="delay">
+	<p>{{message}}</p>
+	</body>
+</html>
