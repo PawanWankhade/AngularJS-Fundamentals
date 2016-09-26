@@ -1,0 +1,17 @@
+<html  ng-app = "myApp">
+<head>
+ <title>My Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-controller="MainController" class="container">
+	<h3>$parse demo</h3>
+	<hr>
+	<p>$parse service is used to compile an expression and convert it into function.</p>
+	
+	<button ng-click = executeMultiply()>Execute Multiply</button>
+	<p>Multiply operation output : {{result}}</p>
+	<p>Selected Id : {{idOfPart}}</p>
+	</body>
+</html>

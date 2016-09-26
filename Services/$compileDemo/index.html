@@ -1,0 +1,29 @@
+<html  ng-app = "myApp">
+<head>
+ <title>My Angular App</title>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="app.js"></script>
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-controller="MainController" class="container">
+	<h3>$compile demo</h3>
+	<hr> 
+	<p>Enter field label</p>
+	<p><input type="text" ng-model="fieldLabel"></p>
+	<p>Enter HTML for new input field:</p>
+	<p><textarea id="htmlInput" type="text" ng-model="htmlMarkup"></textarea>
+	</p>
+	<p><button ng-click="addNewField(htmlMarkup)">Add New Field</button></p>
+	<hr/>
+	
+	<div id="myDiv">
+		<p>Placeholder Cotainer:</p>
+		
+		
+	</div>
+	<em>Add jQuery.js to avoid error related to jQLite.</em>
+	</body>
+</html>
