@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="app.js"></script>
+  </head>
+  <body ng-app="myApp">
+	<div ng-controller="mainController" class="container">
+		<p>Key : <input type="text" ng-model="itemKey"></p>
+		<p>Value : <input type="text" ng-model="itemValue"></p>
+		<p><button ng-click="addItem(itemKey,itemValue)">Add</button></p>
+		<hr />
+		<p>
+			Get Item:
+			<input type="text" ng-model="getKey">
+			<button ng-click="getItem(getKey)">Get</button>
+		</p>
+		
+		<p>
+			Remove Item:
+			<input type="text" ng-model="removeKey">
+			<button ng-click="removeItem(removeKey)">Remove</button>
+		</p>
+
+		<p>
+			Cache Info
+			<ul>
+			<li ng-repeat="(key,value) in cache.info()">
+				{{key}} : {{value}}
+			</li>
+			</ul>
+		</p>
+		<p>
+			Cache value
+			<ul>
+				<li ng-repeat="key in keys">
+					{{key}} : {{cache.get(key)}}
+				</li>
+			</ul>
+		</p>
+		<p>
+			Current Item {{currentItem}}
+		</p>
+		
+		</div>	
+  </body>
+</html>
