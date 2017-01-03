@@ -1,0 +1,31 @@
+<html ng-app = "myApp">
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script src="app.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.redClass{
+			color:red;
+		}
+		.greenClass{
+			color:green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="MainController">
+			<p ng-class="class1">This is paragraph</p>
+			<p class="ng-class:class2">This is paragraph</p>
+			
+			<p ng-class="{'redClass':IsSelected,'greenClass':!IsSelected}">Changes based on selection</p>
+			<p ng-class="{'redClass':IsSelected,'greenClass':!IsSelected}">Is Selected :<input type="checkbox" ng-model="IsSelected"></p>
+			<p></p>
+			
+			</div>
+	
+	</div>
+
+</body>
+</html>

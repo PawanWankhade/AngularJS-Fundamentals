@@ -1,0 +1,30 @@
+<html ng-app = "myApp">
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script src="app.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.evenClass{
+			background-color:#aaeeee;
+		}
+		.oddClass{
+			background-color:#ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="MainController">
+			<table>
+				<tr ng-repeat="item in foodList" ng-class-even="'evenClass'" ng-class-odd="'oddClass'">
+					<td>{{item.name}}</td>
+					<td>{{item.price|currency}}</td>
+			</table>
+		</div>
+		<p>Allow us to set alternating css classes for set of data.</p>
+	
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html ng-app = "myApp">
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script src="app.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="MainController">
+			<p><img ng-src="{{imageUrl}}" width="300" height="400"></p>
+			<a ng-href="{{linkUrl}}" target="_blank">Go to the link</a>
+		</div>
+	</div>
+	<p>The browser before angular has a chance to interpolate the proper resource,browser already make a request for the image and hence it display message in cosole 'failed to load resource' even after image loaded properly'</p>
+	<p>To avoid this error use ng-src instead of src in image tag</p>
+
+</body>
+</html>

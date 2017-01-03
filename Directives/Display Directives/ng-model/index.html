@@ -1,0 +1,54 @@
+<html ng-app = "myApp">
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script src="app.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="MainController">
+			<table class="table">
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" ng-model="user.firstName"></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" ng-model="user.lastName"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" ng-model="user.email"></td>
+				</tr>
+				<tr>
+					<td>Add to mailing list</td>
+					<td><input type="checkbox" ng-model="user.optIn"></td>
+				</tr>
+				<tr>
+					<td>Comments</td>
+					<td><textarea ng-model="user.comments"></textarea></td>
+				</tr>
+				
+				<tr>
+					<td>Color preference</td>
+					<td>
+						<select ng-model="user.selectedColor">
+							<option ng-repeat="color in colors" value={{"color.value"}}>{{color.name}}</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			
+			<hr/>
+			<p>Name {{user.firstName+" "+user.lastName}}</p>
+			<p>Email {{user.email}}</p>
+			<p>Opt In? {{user.optIn}}</p>
+			<p>Comments {{user.comments}}</p>
+			<p>Color preference :<div style="width:80px;height:80px;background-color:{{user.selectedColor}};border:1px solid black"></div></p>
+			
+		</div>
+	
+	</div>
+
+</body>
+</html>
