@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="app.js"></script>
+	
+  </head>
+  <body ng-app="myApp">
+	<div ng-controller="MainController" class="container">
+		<div class="row well" 
+			
+			ng-mouseenter = "doMouseEnter()"
+			ng-mouseleave = "doMouseLeave()"
+			ng-mouseover = "doMouseOver()"
+			ng-mousedown = "doMouseDown()"
+			ng-mouseup = "doMouseUp()"
+			>
+			<div class="col-sm-3 well" ng-mousemove="doMouseMove($event)" >
+				<p>First column</p>
+			</div>
+			<div class="col-sm-3 well">
+				<p>Second column</p>
+			</div>
+			<div class="col-sm-3 well">
+				<p>Third column</p>
+			</div>
+			<div class="col-sm-3 well">
+				<p>Fourth column</p>
+			</div>
+		</div>
+		<p>Mouse Down Count :{{mouseDownCount}}</p>
+		<p>Mouse Up Count :{{mouseUpCount}}</p>
+		<p>Mouse Enter Count :{{mouseEnterCount}}</p>
+		<p>Mouse Leave Count :{{mouseLeaveCount}}</p>
+		<p>Mouse Over Count :{{mouseOverCount}}</p>
+		<p>Mouse Move :{{mouseX}},{{mouseY}}</p>
+		
+  </body>
+</html>
