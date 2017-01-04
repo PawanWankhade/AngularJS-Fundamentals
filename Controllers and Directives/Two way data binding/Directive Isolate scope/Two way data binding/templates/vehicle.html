@@ -1,0 +1,11 @@
+<div>
+  <h3>Item view from template</h3>
+  <ul>
+    <li>{{item.model}}</li>
+    <li>{{item.year}}</li>
+    <li>{{item.makel}}</li>
+    <li>{{item.price | currency}}</li>
+  </ul>
+  <p>Price Incorrect?</p>
+  <p><input type="text" ng-model="item.price"></p>
+</div>

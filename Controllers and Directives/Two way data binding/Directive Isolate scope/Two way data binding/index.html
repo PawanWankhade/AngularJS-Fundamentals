@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="app.js"></script>
+	
+  </head>
+
+  <body>
+    <h1>Examining Isolate scope Directives!</h1>
+    <div ng-controller="MainController">
+	<!--Attribute view-->
+	<span tst-vehicle-view item="firstItem"></span>
+	
+	<!--Element view-->
+	<tst-vehicle-view item="secondItem"></tst-vehicle-view>
+
+	<p>First Item price</p>
+	<p><input type="text" ng-model="firstItem.price"></p>
+
+	<p>Second Item price</p>
+	<p><input type="text" ng-model="secondItem.price"></p>
+    </div>
+	
+  </body>
+
+</html>

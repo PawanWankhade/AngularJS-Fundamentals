@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="app.js"></script>
+	
+  </head>
+
+  <body>
+    <h1>Invoking outer scope functions!</h1>
+    <div ng-controller="MainController">
+		<tst-generate-numbers count="3"
+			on-save = "saveFirst()"
+			generator-function="randomNumbers(count)">
+		</tst-generate-numbers>	
+	
+	<tst-generate-numbers 
+			on-save = "saveSecond()"
+			generator-function="sequentialNumbers(count)">
+		</tst-generate-numbers>	
+	
+  </body>
+
+</html>
